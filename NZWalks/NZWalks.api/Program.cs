@@ -14,8 +14,9 @@ builder.Services.AddDbContext<NZWalksDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"));
 });
+// Register interface and Repo Class to resolve dependencies
 builder.Services.AddScoped<IRegionRepository,RegionRepository>(); // When ever if we call IRegionRepository it will get call the RegionRepository
-
+builder.Services.AddScoped<IWalkRepository,WalkRepository>();
 
 // to inject automapper profiles
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
