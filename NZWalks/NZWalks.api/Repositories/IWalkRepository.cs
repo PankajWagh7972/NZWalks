@@ -10,6 +10,8 @@ namespace NZWalks.api.Repositories
 
         Task<Walk> GetWalkByIdAsync(Guid id);
 
+        Task<Walk> AddWalk(Walk walk);
+
         
     }
 }
