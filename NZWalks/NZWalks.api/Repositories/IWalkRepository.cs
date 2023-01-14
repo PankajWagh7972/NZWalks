@@ -12,6 +12,8 @@ namespace NZWalks.api.Repositories
 
         Task<Walk> AddWalk(Walk walk);
 
+        Task<Walk> UpdateWalk(Guid Id,Walk walk);
+
         
     }
 }
